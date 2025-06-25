@@ -10,7 +10,7 @@
     "format": "npx prettier ./src --write"
   },
   "dependencies": {
-    "astro": "5.5.3"
+    "astro": "^5.10.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

@@ -11,7 +11,6 @@
         "htmlWhitespaceSensitivity": "ignore",
         "insertPragma": false,
         "jsxBracketSameLine": true,
-        "packageManager": "pnpm",
         "printWidth": 200,
         "proseWrap": "never",
         "requirePragma": false,

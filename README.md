@@ -1,48 +1,115 @@
-# Astro Starter Kit: Basics
+# Astro Starter Template
 
-```sh
-npm create astro@latest -- --template basics
-```
+A minimal and flexible starter template for building modern, fast, and SEO-friendly websites with [Astro](https://astro.build/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Astro** 4.x
+- **TypeScript** support
+- **ESLint** + **Prettier** preconfigured
+- **Responsive design**
+- **SEO ready**
+- Easy to extend and customize
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📂 Project Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
+```plaintext
+├── public/             # Static assets (favicons, images, etc.)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Reusable UI components
+│   ├── layouts/        # Page layouts
+│   ├── pages/          # Astro pages (.astro, .md, .mdx)
+│   ├── styles/         # Global styles
+│   └── utils/          # Utility functions
+├── astro.config.mjs    # Astro configuration
+├── tsconfig.json       # TypeScript configuration
+├── package.json        # Dependencies and scripts
+└── README.md           # Project documentation
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### 📂 Pastas principais e papéis
 
-## 🧞 Commands
+- public/
+  Tudo que está aqui é servido diretamente, sem passar pelo Astro. Útil para imagens, fontes e arquivos estáticos grandes.
 
-All commands are run from the root of the project, from a terminal:
+- src/components/
+  Componentes reutilizáveis. Podem ser .astro (nativos) ou de outros frameworks como React (.jsx / .tsx).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- src/layouts/
+  Layouts que servem de "molde" para páginas, com slots (<slot />) para conteúdo dinâmico.
 
-## 👀 Want to learn more?
+- src/pages/
+  Onde as rotas são definidas automaticamente (file-based routing).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+/about.astro → /about
+
+/blog/[slug].astro → rota dinâmica.
+
+- src/styles/
+  Onde ficam estilos globais ou CSS modules.
+
+- src/lib/ (opcional)
+  Funções utilitárias, hooks (quando usando React/Vue dentro do Astro), etc.
+
+- src/data/ (opcional)
+  Dados estáticos em JSON/YAML/Markdown que podem ser carregados em build time.
+
+### 🏗️ Como se organiza em projetos maiores
+
+Quando o projeto cresce, é comum ver:
+
+```ruby
+src/
+  ├── components/
+  │   ├── ui/            # Botões, inputs, etc.
+  │   ├── sections/      # Seções completas de página (hero, footer, etc.)
+  ├── content/           # Usando @astro/content para Markdown/MDX
+  ├── layouts/
+  ├── pages/
+  ├── utils/
+  └── styles/
+```
+
+E também usar integrations como:
+
+@astro/tailwind → classes utilitárias
+
+@astro/image → otimização de imagens
+
+@astro/mdx → suporte a MDX
+
+## 📦 Installation
+
+```bash
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
+
+## 🛠 Development
+
+```bash
+npm run dev
+```
+
+## 📦 Build
+
+```bash
+npm run build
+```
+
+## 🔍 Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📝 License
+
+This project is licensed under the MIT License. Feel free to use and modify it for your own projects.
+
+---
+
+**Author:** [Alfredo Tito](https://github.com/alfredots)
